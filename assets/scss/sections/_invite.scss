@@ -1,0 +1,186 @@
+
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.invite {
+    width: 100%;
+    background: url('../../assets/images/flowers_bg.png') no-repeat, url('../../assets/images/flower_bg_bottom_bg.png') no-repeat;
+    background-size: 100% auto, 100% auto;
+    background-position: center 12%, bottom;
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: $font-gotham;
+
+        .save-the-date {
+            font-family: $font-UVNKeChuyen3;
+            font-size: 44px;
+            font-weight: 300;
+            margin-top: 6%;
+            margin-bottom: 4%;
+        }
+        .image-tulip {  
+            max-width: 196px;
+            width: 100%;
+            margin-bottom: 5%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .invitation-text {
+            font-family: $font-lora;
+            font-size: 14px;
+            margin-bottom: 8%;
+        }
+
+        .names {
+            position: relative;
+            margin-bottom: 8%;
+
+            .name {
+                font-family: $font-BlushingRose;
+                font-size: 38px;
+
+                &.husband {
+                    margin-bottom: 10%;
+                }
+            }
+            .ampersand {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: -10;
+                img {
+                    max-width: 60px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .subtitle {
+            font-family: $font-lora;
+            font-size: 15px;
+            margin-bottom: 5%;
+        }
+
+        .datetime {
+            font-size: 34px;
+            font-family: $font-lora;
+            border-top: solid 2px $primary-color;
+            border-bottom: solid 2px $primary-color;
+            padding: 1.5%;
+            margin-bottom: 10%;
+        }
+
+        .calendar {
+            margin-bottom: 8%;
+            img {
+                max-width: 433px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .location {
+            width: 100%;
+            .label {
+                font-family: $font-lora;
+                font-size: 15px;
+                margin-bottom: 2%;
+            }
+            .name {
+                font-family: $font-UVNKeChuyen3;
+                font-size: 42px;
+                line-height: 1.2;
+                margin-bottom: 2%;
+            }
+            .address {
+                font-family: $font-lora;
+                font-size: 13px;
+                margin-bottom: 2%;
+            }
+            .maps-button {
+                font-family: $font-gotham;
+                display: block;
+                width: 40%;
+                padding: .5% 0;
+                background-color: #93825dff;
+                color: white;
+                border: none;
+                font-size: 13px;
+                letter-spacing: 1px;
+                cursor: pointer;
+                font-weight: 600;
+                border-radius: 15px;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                margin: 0 auto;
+                margin-bottom: 10%;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .save-the-date {
+                font-size: calc((44 / 500) * 100vw);
+            }
+            .image-tulip {  
+                max-width: calc((196 / 500) * 100vw);
+            }
+    
+            .invitation-text {
+                font-size: calc((14 / 500) * 100vw);
+            }
+    
+            .names {
+                .name {
+                    font-size: calc((38 / 500) * 100vw);
+                }
+                .ampersand {
+                    img {
+                        max-width: calc((60 / 500) * 100vw);
+                    }
+                }
+            }
+    
+            .subtitle {
+                font-size: calc((15 / 500) * 100vw);
+            }
+    
+            .datetime {
+                font-size: calc((34 / 500) * 100vw);
+            }
+    
+            .calendar {
+                img {
+                    max-width: calc((433 / 500) * 100vw);
+                }
+            }
+    
+            .location {
+                .label {
+                    font-size: calc((15 / 500) * 100vw);
+                }
+                .name {
+                    font-size: calc((42 / 500) * 100vw);
+                }
+                .address {
+                    font-size: calc((13 / 500) * 100vw);
+                }
+                .maps-button {
+                    font-size: calc((13 / 500) * 100vw);
+                    letter-spacing: calc((1 / 500) * 100vw);
+                }
+            }
+            
+        }
+    }
+}

@@ -135,8 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // const qrcode = document.getElementById('qr-btn');
   // qrcode.addEventListener("click", toggleQR);
 
-  // const btn = document.getElementById('player-btn');
-  // btn.addEventListener('click', toggleMusic);
+  const btn = document.getElementById('player-btn');
+  btn.addEventListener('click', toggleMusic);
 
   const form = document.forms["rsvpForm"];
   if (form) {

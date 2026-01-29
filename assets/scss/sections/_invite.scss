@@ -34,7 +34,7 @@
 
         .invitation-text {
             font-family: $font-lora;
-            font-size: 14px;
+            font-size: 17px;
             margin-bottom: 8%;
         }
 
@@ -66,7 +66,7 @@
 
         .subtitle {
             font-family: $font-lora;
-            font-size: 15px;
+            font-size: 17px;
             margin-bottom: 5%;
         }
 
@@ -92,7 +92,7 @@
             width: 100%;
             .label {
                 font-family: $font-lora;
-                font-size: 15px;
+                font-size: 17px;
                 margin-bottom: 2%;
             }
             .name {
@@ -103,7 +103,7 @@
             }
             .address {
                 font-family: $font-lora;
-                font-size: 13px;
+                font-size: 16px;
                 margin-bottom: 2%;
             }
             .maps-button {
@@ -114,7 +114,7 @@
                 background-color: #93825dff;
                 color: white;
                 border: none;
-                font-size: 13px;
+                font-size: 15px;
                 letter-spacing: 1px;
                 cursor: pointer;
                 font-weight: 600;
@@ -137,7 +137,7 @@
             }
     
             .invitation-text {
-                font-size: calc((14 / 500) * 100vw);
+                font-size: calc((17 / 500) * 100vw);
             }
     
             .names {
@@ -152,7 +152,7 @@
             }
     
             .subtitle {
-                font-size: calc((15 / 500) * 100vw);
+                font-size: calc((17 / 500) * 100vw);
             }
     
             .datetime {
@@ -167,16 +167,16 @@
     
             .location {
                 .label {
-                    font-size: calc((15 / 500) * 100vw);
+                    font-size: calc((17 / 500) * 100vw);
                 }
                 .name {
                     font-size: calc((42 / 500) * 100vw);
                 }
                 .address {
-                    font-size: calc((13 / 500) * 100vw);
+                    font-size: calc((16 / 500) * 100vw);
                 }
                 .maps-button {
-                    font-size: calc((13 / 500) * 100vw);
+                    font-size: calc((15 / 500) * 100vw);
                     letter-spacing: calc((1 / 500) * 100vw);
                 }
             }

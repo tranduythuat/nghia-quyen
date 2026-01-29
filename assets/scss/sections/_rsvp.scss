@@ -30,7 +30,7 @@
                     margin-bottom: 2%;
                 }
                 .subtitle {
-                    font-size: 12px;
+                    font-size: 15px;
                 }
             }
 
@@ -83,7 +83,7 @@
                     padding: 2% 4%;
                     border-radius: 8px;
                     background: transparent;
-                    font-size: 10px;
+                    font-size: 14px;
                     outline: none;
                     border: 2px solid $primary-color;
                     transition: border-color 0.3s ease;
@@ -112,13 +112,18 @@
                     white-space: pre-line; /* Cho phép hiển thị xuống dòng trong placeholder */
                 }
 
+                .guest-info-title {
+                    font-size: 15px;
+                    margin-bottom: 2%;
+                }
+
                 .form-select {
                     font-family: $font-lora;
                     width: 100%;
                     padding: 2% 4%;
                     border-radius: 8px;
                     background: transparent;
-                    font-size: 10px;
+                    font-size: 14px;
                     color: $primary-color;
                     outline: none;
                     border: 2px solid $primary-color ;
@@ -178,7 +183,7 @@
                 border: none;
                 border-radius: 8px;
                 font-weight: 600;
-                font-size: 10px;
+                font-size: 13px;
                 cursor: pointer;
                 text-transform: uppercase;
                 letter-spacing: 1px;
@@ -226,7 +231,7 @@
                         font-size: calc((46 / 500) * 100vw);
                     }
                     .subtitle {
-                        font-size: calc((12 / 500) * 100vw);;
+                        font-size: calc((15 / 500) * 100vw);;
                     }
                 }
 
@@ -235,12 +240,16 @@
                     input[type="number"],
                     textarea,
                     .form-select {
-                        font-size: calc((10 / 500) * 100vw);
+                        font-size: calc((14 / 500) * 100vw);
+                    }
+
+                    .guest-info-title {
+                        font-size: calc((15 / 500) * 100vw);
                     }
                 }
 
                 .submit-btn {
-                    font-size: calc((10 / 500) * 100vw);
+                    font-size: calc((13 / 500) * 100vw);
                 }
             }
         }

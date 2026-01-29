@@ -266,7 +266,7 @@ header {
 }
 .invite .content .invitation-text {
   font-family: "Lora", sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   margin-bottom: 8%;
 }
 .invite .content .names {
@@ -294,7 +294,7 @@ header {
 }
 .invite .content .subtitle {
   font-family: "Lora", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 5%;
 }
 .invite .content .datetime {
@@ -318,7 +318,7 @@ header {
 }
 .invite .content .location .label {
   font-family: "Lora", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 2%;
 }
 .invite .content .location .name {
@@ -329,7 +329,7 @@ header {
 }
 .invite .content .location .address {
   font-family: "Lora", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   margin-bottom: 2%;
 }
 .invite .content .location .maps-button {
@@ -340,7 +340,7 @@ header {
   background-color: #93825d;
   color: white;
   border: none;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 1px;
   cursor: pointer;
   font-weight: 600;
@@ -358,7 +358,7 @@ header {
     max-width: 39.2vw;
   }
   .invite .content .invitation-text {
-    font-size: 2.8vw;
+    font-size: 3.4vw;
   }
   .invite .content .names .name {
     font-size: 7.6vw;
@@ -367,7 +367,7 @@ header {
     max-width: 12vw;
   }
   .invite .content .subtitle {
-    font-size: 3vw;
+    font-size: 3.4vw;
   }
   .invite .content .datetime {
     font-size: 6.8vw;
@@ -376,16 +376,16 @@ header {
     max-width: 86.6vw;
   }
   .invite .content .location .label {
-    font-size: 3vw;
+    font-size: 3.4vw;
   }
   .invite .content .location .name {
     font-size: 8.4vw;
   }
   .invite .content .location .address {
-    font-size: 2.6vw;
+    font-size: 3.2vw;
   }
   .invite .content .location .maps-button {
-    font-size: 2.6vw;
+    font-size: 3vw;
     letter-spacing: 0.2vw;
   }
 }
@@ -529,7 +529,7 @@ header {
   margin-bottom: 2%;
 }
 .rsvp .content .rsvp-form .header .subtitle {
-  font-size: 12px;
+  font-size: 15px;
 }
 .rsvp .content .rsvp-form .button-group {
   display: grid;
@@ -574,7 +574,7 @@ header {
   padding: 2% 4%;
   border-radius: 8px;
   background: transparent;
-  font-size: 10px;
+  font-size: 14px;
   outline: none;
   border: 2px solid #93825d;
   transition: border-color 0.3s ease;
@@ -596,13 +596,17 @@ header {
 .rsvp .content .rsvp-form .form-group textarea::placeholder {
   white-space: pre-line; /* Cho phép hiển thị xuống dòng trong placeholder */
 }
+.rsvp .content .rsvp-form .form-group .guest-info-title {
+  font-size: 15px;
+  margin-bottom: 2%;
+}
 .rsvp .content .rsvp-form .form-group .form-select {
   font-family: "Lora", sans-serif;
   width: 100%;
   padding: 2% 4%;
   border-radius: 8px;
   background: transparent;
-  font-size: 10px;
+  font-size: 14px;
   color: #93825d;
   outline: none;
   border: 2px solid #93825d;
@@ -655,7 +659,7 @@ header {
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 13px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -690,16 +694,19 @@ header {
     font-size: 9.2vw;
   }
   .rsvp .content .rsvp-form .header .subtitle {
-    font-size: 2.4vw;
+    font-size: 3vw;
   }
   .rsvp .content .rsvp-form .form-group input[type=text],
   .rsvp .content .rsvp-form .form-group input[type=number],
   .rsvp .content .rsvp-form .form-group textarea,
   .rsvp .content .rsvp-form .form-group .form-select {
-    font-size: 2vw;
+    font-size: 2.8vw;
+  }
+  .rsvp .content .rsvp-form .form-group .guest-info-title {
+    font-size: 3vw;
   }
   .rsvp .content .rsvp-form .submit-btn {
-    font-size: 2vw;
+    font-size: 2.6vw;
   }
 }
 

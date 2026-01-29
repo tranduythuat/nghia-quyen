@@ -228,20 +228,18 @@
             <div class="form-group fade-in">
               <select class="form-select" name="confirm" required>
                 <option value="" disabled selected>Bạn sẽ đến chứ?</option>
-                <option value="yes">Có, tôi sẽ đến</option>
-                <option value="no">Rất tiếc, tôi không thể đến</option>
-                <option value="maybe">Chưa chắc chắn</option>
+                <option value="yes">Mình chắc chắn sẽ đến</option>
+                <option value="no">Xin lỗi mình bận rồi</option>
               </select>
             </div>
 
             <div class="form-group fade-in">
               <select class="form-select" name="guest_number" required>
                 <option value="" disabled selected>Bạn sẽ tham dự cùng bao nhiêu người?</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">1 người</option>
+                <option value="2">2 người</option>
+                <option value="3">3 người</option>
+                <option value="4">4 người</option>
               </select>
             </div>
 
@@ -297,14 +295,17 @@
             <div class="form-group fade-in">
               <select class="form-select" name="dietary">
                 <option value="" disabled selected>Bạn có lưu ý đặc biệt gì về thức ăn không?</option>
-                <option value="Bình thường">Tôi bình thường</option>
-                <option value="Ăn chay">Tôi ăn chay</option>
+                <option value="Thực đơn thường">Thực đơn thường</option>
+                <option value="Thực đơn chay">Thực đơn chay</option>
               </select>
             </div>
 
-            <!-- <div class="form-group other fade-right">
-            <input type="text" id="other" placeholder="ANOTHER - YÊU CẦU KHÁC?" name="other">
-          </div> -->
+            <div class="form-group fade-in other">
+              <textarea
+                id="other"
+                name="other"
+                placeholder="Hướng dẫn về dị ứng"></textarea>
+            </div>
 
             <div class="form-group fade-in">
               <textarea

@@ -584,7 +584,7 @@ header {
 .rsvp .content .rsvp-form .form-group textarea:focus {
   outline: none;
 }
-.rsvp .content .rsvp-form .form-group textarea {
+.rsvp .content .rsvp-form .form-group textarea#message {
   aspect-ratio: 500/100;
   resize: vertical;
   font-family: inherit;

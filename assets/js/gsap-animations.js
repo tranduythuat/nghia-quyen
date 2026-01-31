@@ -10,7 +10,7 @@ function gsapFlipIn(selector) {
       ease: "back.out(1.5)",
       scrollTrigger: {
         trigger: el,
-        start: "top 80%",
+        start: "top 85%",
         toggleActions: "play none none reverse",
       },
     });
@@ -22,7 +22,7 @@ function gsapFlipInThenYoyo(selector) {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: el,
-        start: "top 80%",
+        start: "top 85%",
         toggleActions: "play none none reverse",
       }
     });
@@ -82,8 +82,7 @@ function gsapFadeInForEnd(selector) {
         clearProps: "filter",
         scrollTrigger: {
           trigger: el,
-          start: "top 90%",
-          end: "bottom 60%",
+          start: "top 100%",
           toggleActions: "play none none reverse"
         }
       }
@@ -134,11 +133,55 @@ function gsapFadeInThenYoyo(selector) {
   })
 }
 
+function gsapFadeInThenPulse(selector) {
+  gsap.utils.toArray(selector).forEach((el) => {
+    el.classList.add("pulse");
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none reverse", // không reverse
+      }
+    });
+
+    // 1️⃣ Fade-in
+    tl.fromTo(
+      el,
+      {
+        opacity: 0,
+        y: 50,
+        filter: "blur(10px)"
+      },
+      {
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+        duration: 1,
+        ease: "power2.out",
+        clearProps: "filter"
+      }
+    );
+
+    // 2️⃣ Nhấp nhô sau khi hoàn thành
+    tl.call(() => {
+      gsap.to(el, {
+        scale: 1.1,      // biên độ nhấp nhô
+        duration: 1,    // tốc độ
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+        transformOrigin: "50% 50%"
+      });
+    });
+  });
+}
+
+
 function gsapFadeRight(selector) {
   gsap.utils.toArray(selector).forEach((el) => {
     gsap.fromTo(
       el,
-      { opacity: 0, x: -120 },
+      { opacity: 0, x: -30 },
       {
         opacity: 1,
         x: 0,
@@ -147,7 +190,7 @@ function gsapFadeRight(selector) {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
         },
       }
     );
@@ -158,7 +201,7 @@ function gsapFadeLeft(selector) {
   gsap.utils.toArray(selector).forEach((el) => {
     gsap.fromTo(
       el,
-      { opacity: 0, x: 120 },
+      { opacity: 0, x: 30 },
       {
         opacity: 1,
         x: 0,
@@ -167,7 +210,7 @@ function gsapFadeLeft(selector) {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
         },
       }
     );
@@ -188,7 +231,7 @@ function gsapFadeUp(selector) {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
         },
       }
     );
@@ -228,7 +271,25 @@ function gsapFlipVerticalLeft(selector) {
       scrollTrigger: {
         trigger: el,
         start: "top 85%",
-        toggleActions: "play none none none",
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
+}
+
+function gsapFlipVerticalBottom(selector) {
+  gsap.utils.toArray(selector).forEach((el) => {
+    gsap.from(el, {
+      rotateX: -120,
+      scale: 0.8,
+      opacity: 0,
+      duration: 2,
+      ease: "back.out(1.2)",
+      transformOrigin: "center center",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
       },
     });
   });

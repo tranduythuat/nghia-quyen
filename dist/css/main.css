@@ -215,7 +215,7 @@ header {
 }
 .hero .content {
   aspect-ratio: 500/730;
-  background: url("../../assets/images/hero_bg.png") no-repeat center/contain;
+  background: url("../../assets/images/hero_bg.webp") no-repeat center/contain;
   width: 100%;
   height: 100%;
   display: flex;
@@ -307,11 +307,29 @@ header {
 }
 .invite .content .calendar {
   margin-bottom: 8%;
+  position: relative;
+  perspective: 1000px;
 }
-.invite .content .calendar img {
+.invite .content .calendar img.main-img {
   max-width: 433px;
   width: 100%;
   height: auto;
+}
+.invite .content .calendar img.heart {
+  position: absolute;
+  max-width: 40px;
+  width: 100%;
+  height: auto;
+  top: 45%;
+  right: 34%;
+}
+.invite .content .calendar img.date-num {
+  position: absolute;
+  max-width: 18px;
+  width: 100%;
+  height: auto;
+  top: 49%;
+  right: 36%;
 }
 .invite .content .location {
   width: 100%;
@@ -332,23 +350,28 @@ header {
   font-size: 16px;
   margin-bottom: 2%;
 }
-.invite .content .location .maps-button {
-  font-family: "SVN-GothamBook", sans-serif;
-  display: block;
-  width: 40%;
-  padding: 0.5% 0;
-  background-color: #93825d;
-  color: white;
-  border: none;
-  font-size: 15px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  margin: 0 auto;
+.invite .content .location .map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #93825d;
   margin-bottom: 10%;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: "Lora", sans-serif;
+}
+.invite .content .location .map .location-icon {
+  max-width: 24px;
+  width: 100%;
+  aspect-ratio: 1;
+  fill: #93825d; /* Đổi màu */
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1%;
 }
 @media (max-width: 500px) {
   .invite .content .save-the-date {
@@ -372,8 +395,17 @@ header {
   .invite .content .datetime {
     font-size: 6.8vw;
   }
-  .invite .content .calendar img {
+  .invite .content .calendar img.main-img {
     max-width: 86.6vw;
+  }
+  .invite .content .calendar img.heart {
+    max-width: 8vw;
+  }
+  .invite .content .calendar img.date-num {
+    max-width: 3.6vw;
+  }
+  .invite .content .location {
+    perspective: 1000px;
   }
   .invite .content .location .label {
     font-size: 3.4vw;
@@ -384,10 +416,18 @@ header {
   .invite .content .location .address {
     font-size: 3.2vw;
   }
-  .invite .content .location .maps-button {
-    font-size: 3vw;
-    letter-spacing: 0.2vw;
+  .invite .content .location .map {
+    font-size: 4vw;
+    letter-spacing: 0.24vw;
   }
+  .invite .content .location .map .location-icon {
+    max-width: 4.8vw;
+  }
+}
+
+.pulse {
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .timeline {
@@ -466,6 +506,7 @@ header {
 }
 .dresscode .content {
   width: 100%;
+  perspective: 1000px;
 }
 .dresscode .content h2 {
   font-family: "UVNKeChuyen3", sans-serif;
@@ -509,6 +550,7 @@ header {
   background: url("../../assets/images/flowers_bg.png") no-repeat;
   background-size: 100% auto;
   background-position: center 200%;
+  perspective: 1000px;
 }
 .rsvp .content .top-img img {
   max-width: 100%;
@@ -723,6 +765,7 @@ header {
 }
 .countdown .content .divider {
   margin: 2% 0 6%;
+  perspective: 1000px;
 }
 .countdown .content .divider img {
   max-width: 132px;
@@ -789,29 +832,29 @@ header {
 .end .content {
   width: 100%;
   aspect-ratio: 500/268;
-  background: url("../../assets/images/end_bg.png") no-repeat center/cover;
+  background: url("../../assets/images/end_bg.webp") no-repeat center/cover;
   color: white;
-  padding: 0 10%;
+  padding: 0 8%;
   text-align: center;
 }
 .end .content .text-main {
-  font-size: 14.6px;
+  font-size: 16px;
   line-height: 1.3;
   letter-spacing: 1px;
   margin-top: 18%;
 }
 .end .content .thanks {
   font-family: "UVNKeChuyen3", sans-serif;
-  font-size: 35px;
+  font-size: 40px;
   margin-top: 8%;
 }
 @media (max-width: 500px) {
   .end .content .text-main {
-    font-size: 2.92vw;
+    font-size: 3.2vw;
     letter-spacing: 0.2vw;
   }
   .end .content .thanks {
-    font-size: 7vw;
+    font-size: 8vw;
   }
 }
 
@@ -872,12 +915,12 @@ header {
 }
 .letter-section .content .letter-img .open-letter {
   position: absolute;
-  left: 44%;
+  left: 43%;
   bottom: 9%;
-  font-size: 12px;
+  font-size: 14px;
 }
 .letter-section .content .info .date {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 48%;
 }
 @media (max-width: 500px) {
@@ -891,10 +934,10 @@ header {
     max-width: 79.4vw;
   }
   .letter-section .content .letter-img .open-letter {
-    font-size: 2.4vw;
+    font-size: 2.8vw;
   }
   .letter-section .content .info .date {
-    font-size: 2.8vw;
+    font-size: 3.2vw;
   }
 }
 

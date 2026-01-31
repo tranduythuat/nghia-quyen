@@ -29,9 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Thêm các animation theo thứ tự
-  tl.from(".husband", { y: 100, opacity: 0 })        
-    .from(".wife", { y: 100, opacity: 0 }, "-=0.2")       
-    .from(".letter-img", { y: 100, opacity: 0 }, "-=0.4")       
+  tl.from(".husband", { x: 80, opacity: 0 })        
+    .from(".wife", { x: -80, opacity: 0 }, "-=0.5")       
+    tl.fromTo(
+      ".letter-img",
+      {
+        rotation: -120,
+        scale: 0,
+        opacity: 0
+      },
+      {
+        rotation: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1.2,
+        ease: "back.out(1.6)",
+        transformOrigin: "50% 50%"
+      },
+      "-=0.4"
+    )    
     .from(".open-letter", { y: 100, opacity: 0 }, "-=0.4")       
     .from(".date", { y: 100, opacity: 0 }, "-=0.4");    
 });

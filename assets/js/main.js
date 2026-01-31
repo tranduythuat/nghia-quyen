@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsapFadeIn(".fade-in");
   gsapFadeInForEnd(".fade-in-end");
   gsapFadeInThenYoyo(".fade-in-yoyo");
+  gsapFadeInThenPulse(".fade-in-pulse");
   gsapFadeRight(".fade-right");
   gsapFadeLeft(".fade-left");
   gsapFadeUp(".fade-up");
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsapRotateBottomLeftThenYoyo(".rotate-bl-yoyo");
   gsapRotateBottomRightThenYoyo(".rotate-br-yoyo");
   gsapFlipVerticalLeft(".flip-vertical-left");
+  gsapFlipVerticalBottom(".flip-vertical-bottom");
   gsapRollInLeft(".roll-in-left");
   gsap_rotate_bl__float(".rotate-bl--float");
 
@@ -48,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".color-palette",
       start: "top 85%", // khi phần tử xuất hiện 80% trong viewport
+      toggleActions: "play none none reverse",
     }
   });
 
@@ -59,6 +62,87 @@ document.addEventListener("DOMContentLoaded", () => {
     .from(".five", { x: -100, opacity: 0 }, "-=0.4")       
     .from(".six", { x: -100, opacity: 0 }, "-=0.5")       
     .from(".seven", { x: -100, opacity: 0 }, "-=0.5");    
+
+  // timeline animation
+  function animateTimelineItem(item) {
+    const icon = item.querySelector('.icon-animate');
+    const time = item.querySelector('.time');
+    const texts = item.querySelectorAll('.event');
+  
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      }
+    });
+  
+    // 1️⃣ ICON – vào trước
+    if (icon) {
+      tl.fromTo(
+        icon,
+        {
+          rotation: -120,
+          scale: 0,
+          opacity: 0
+        },
+        {
+          rotation: 0,
+          scale: 1,
+          opacity: 1,
+          duration: 0.8,
+          ease: "back.out(1.6)",
+          transformOrigin: "50% 50%"
+        }
+      );
+    }
+  
+    // 2️⃣ TIME – hiện sau icon
+    if (time) {
+      tl.fromTo(
+        time,
+        {
+          opacity: 0,
+          y: 20,
+          filter: "blur(6px)"
+        },
+        {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.6,
+          ease: "power2.out",
+          clearProps: "filter"
+        },
+        "-=0.2"
+      );
+    }
+  
+    // 3️⃣ TITLE + DESC – vào cuối (stagger)
+    if (texts.length) {
+      tl.fromTo(
+        texts,
+        {
+          opacity: 0,
+          y: 20,
+          filter: "blur(6px)"
+        },
+        {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.12,
+          clearProps: "filter"
+        },
+        "-=0.1"
+      );
+    }
+  }
+
+  document.querySelectorAll('.timeline-item').forEach(animateTimelineItem);
+  
 
   async function playMusic(e) {
     const music = document.getElementById('audio');

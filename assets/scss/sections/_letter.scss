@@ -58,15 +58,15 @@
             }
             .open-letter {
                 position: absolute;
-                left: 44%;
+                left: 43%;
                 bottom: 9%;
-                font-size: 12px;
+                font-size: 14px;
             }
         }
 
         .info {
             .date {
-                font-size: 14px;
+                font-size: 16px;
                 margin-top: 48%;
             }
         }
@@ -90,13 +90,13 @@
                     max-width: calc((397 / 500) * 100vw);;
                 }
                 .open-letter {
-                    font-size: calc((12 / 500) * 100vw);;
+                    font-size: calc((14 / 500) * 100vw);;
                 }
             }
     
             .info {
                 .date {
-                    font-size: calc((14 / 500) * 100vw);;
+                    font-size: calc((16 / 500) * 100vw);;
                 }
             }
         }
